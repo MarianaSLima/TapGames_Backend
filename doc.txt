@@ -1,0 +1,32 @@
+PROJETO DE SERVICO WEB USANDO NODEJS
+https://nodejs.org/en/
+
+npm init - comando para inicializar um projeto nodejs
+ao final desse comando sera criado um arquivo package.json
+
+-criou arquivo server.js
+
+-npm i -s express
+http://expressjs.com/en/starter/installing.html
+
+-npm i -s dotenv
+para trabalharmos com variaveis globais em um arquivo .env (env é de 
+variaveis de ambiente)
+-criamos o arquivo .env e definimos os valores
+
+-criamos a pasta Src (local onde ficaram as rotas e funcoes do nosso servico)
+
+-criou o arquivo routes.js dentro da pasta Src
+
+-para tratarmos a seguranca das requisicoes instalmos o cors 
+npm i -s cors
+
+para inicializar
+instalamos o nodemon
+npm i -s nodemon
+configuramos o package.json com o script de inicializacao startdev
+
+npm run startdev
+
+para testar a api
+https://resttesttest.com/
