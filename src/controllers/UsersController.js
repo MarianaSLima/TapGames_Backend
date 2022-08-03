@@ -4,6 +4,7 @@ const Users = require('../models/Users'); //importando o modelo de Users
 module.exports = {
     add: async (req, res) => {
         const {avatar, nome, nick, email, passwordHash, score, ranking} = req.body;
+        console.log("aqui")
         let addUser = new Users({avatar, nome, nick, email, passwordHash, score, ranking});
         const saveUsers = await addUser.save();
         if(!saveUsers) {
