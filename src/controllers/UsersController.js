@@ -17,6 +17,23 @@ module.exports = {
             });
         }
     },
+    login: async (req, res) => {
+        const { email, password} = req.body;
+        const user = await Users.findOne({email});
+
+        if(!user) {
+            res.json({
+                error: 'Erro ao logar'
+            });
+        }
+
+        if(user.passwordHash === password) {
+            res.json({
+                data: user
+            });
+        }
+    },
+
     list: async(req, res) => {
         const listUsers = await Users.find();
         if(!listUsers){
