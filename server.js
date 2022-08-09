@@ -3,7 +3,7 @@ const express = require('express'); //importo o express para o projeto - criando
 const server = express(); //inicializa o express
 //importando o arquivo(modulo) de rotas do express
 const cors = require('cors'); // importando o cors
-const mongodb = require('./src/database/mongodb'); //importa o arquivo de conexao com o mongoDB
+const mongodb = require('./src/database/mongodb'); //importa o arquivo de conexao com o mongoDBjh
 
 mongodb();//inicializa a conexao com o mongoDB
 
