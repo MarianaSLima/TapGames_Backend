@@ -124,8 +124,8 @@ module.exports = {
         const id = req.params.id;
         const { avatar, nome, nick, email } = req.body;
 
-        const userUpdate = await Users.findByIdAndUpdate(id, { avatar, nome, nick, email });
-
+        await Users.findByIdAndUpdate(id, { avatar, nome, nick, email });
+        const userUpdate = await Users.findById(id);
         if (!userUpdate) {
             res.json({
                 data: [],
